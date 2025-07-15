@@ -1,5 +1,5 @@
 <?php
-namespace lucasan\gs\CoreCore;
+namespace lucasan\gs\Core;
 
 interface Crud{
     public function create();
