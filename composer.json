@@ -1,0 +1,16 @@
+{
+    "name": "lucasan/gs",
+    "description": "Basic Student Grading System",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Lucasan\\Gs\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucasan D."
+        }
+    ],
+    "require": {}
+}
