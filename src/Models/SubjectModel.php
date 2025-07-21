@@ -2,9 +2,10 @@
 
 namespace Lucasan\Gs\Models;
 
-use lucasan\gs\CoreCore\Crud;
+use lucasan\gs\Core\Crud;
 
 class SubjectModel implements Crud{
+  
     public function create(){
 
     }

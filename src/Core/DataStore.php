@@ -1,5 +1,5 @@
 <?php 
-namespace lucasan\gs\Core;
+namespace Lucasan\Gs\Core;
 class DataStore
 {
     private string $filePath;
