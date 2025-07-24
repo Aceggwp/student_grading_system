@@ -1,22 +1,26 @@
 <?php
 
-use Lucasan\Gs\Core\Database;
+use lucasan\gs\Core\Crud;
 use Lucasan\Gs\Models\StudentModel;
-
+use Lucasan\Gs\Core\Database;
 
 require 'vendor/autoload.php';
  
-// $student = new StudentModel();
-// $student->id = 12162;
-// $student->name = "dirk";
-// $student->course = "NPA";
-// $student->year_level = 1;
-// $student->section = "D";
-// $student->create();
+ $student = new StudentModel();
+ $student->id = 112;
+ $student->name = "dirk";
+ $student->course = "NPA";
+ $student->year_level = 12;
+ $student->section = "D";
 
-$student =new StudentModel;
+
+// $student =new StudentModel;
 $listofstudents = $student->read();
 
-print_r($listofstudents);
+// print_r($listofstudents);
 
 
+//$student->create(112);
+$student->read();
+// $student->update();
+// $student->delete();

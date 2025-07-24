@@ -17,17 +17,17 @@ class StudentModel extends Database implements Crud{
     public function __construct()
     {
         parent::__construct();
-        $this->id= 0;
+        $this->id=0;
         $this->name="";
         $this->course="";
-        $this->year_level=0 ;
+        $this->year_level=0;
         $this->section="";
     }
     public function create(){
         //CREATE DATA
-        $query = $this->conn->prepare("INSERT INTO `student`(`id`, `name`, `course`, `year_level`, `section`) VALUES ('$this->id','$this->name','$this->course','$this->year_level','$this->section')");
+        $query = $this->conn->prepare("INSERT INTO `students` (`id`, `name`, `course`, `year_level`, `section`) VALUES ('$this->id','$this->name','$this->course','$this->year_level','$this->section')");
         if ($query->execute()){
-            echo "Student Paldo!";
+            echo "Student Created Successfully!";
         }
     }
     public function read(){
@@ -41,10 +41,18 @@ class StudentModel extends Database implements Crud{
         }
 
     
-    public function update(){
-
+    public function update($id){
+        $query = $this->conn->prepare("UPDATE 'students' SET id='$this->id',name='$this->name',course='$this->course,'year_level='$this->year_level,'section='$this->section' WHERE id = $id");
+        if ($query->execute()){
+            echo "Student Updated Successfully!";
+        }
     }
-    public function delete(){
+    public function delete($id){
+        $query = $this->conn->prepare("DELETE FROM 'students' WHERE = $id");
+        if ($query->execute()){
+            echo "Student Deleted Successfully!";
+        }
 
     }
 }
+?>
